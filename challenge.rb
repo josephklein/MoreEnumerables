@@ -1,6 +1,6 @@
 
 def capitalize_each_string(input)
-  return input.map{ |i| i.dup.capitalize! }
+  return input.map( &:capitalize )
 end
 
 def fetch_the_dog(input)
@@ -12,15 +12,15 @@ def no_dogs_allowed(input)
 end
 
 def count_the_animals(input)
-  return input.length
+  return input.size
 end
 
 def fetch_the_first_two(input)
-  return input.take(2)
+  return input.first(2)
 end
 
 def fetch_CD_animals(input)
-  return input.find_all{ |a| a[0] == "d" or a[0] == "c"}
+  return input.grep(/^c|^d/)
 end
 
 ## DO NOT CHANGE CODE BELOW THIS LINE ##
